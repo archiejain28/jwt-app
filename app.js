@@ -19,7 +19,7 @@ app.post('/register', (req,res) => {
             try{
                if(err) throw err;
                else if (result.length != 0){
-                    (res.status(409).send('User already exist.Please login')) 
+                    (res.status(409).send('User already exist.Please login again')) 
                  }  
                 else{
                     let encryptpwd = await bcrypt.hash(Password,10);
